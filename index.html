@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Diskon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Perhitungan diskon belanja</h2>
+
+        <div class="form-container">
+            <label for="item">pilih barang:</label>
+            <select id="item">
+                <option value="" disabled selected>pilih barang alat tulis</option>
+                <option value="0" data-price="3000">pulpen</option>
+                <option value="1" data-price="2000">pensil</option>
+                <option value="2" data-price="6000">buku tulis</option>
+                <option value="3" data-price="17000">scarpbook</option>
+                <option value="4" data-price="8000">spidol</option>
+                <option value="5" data-price="25000">tinta spidol</option>
+                <option value="6" data-price="30000">pensil warna</option>
+                <option value="7" data-price=" 19000">cat air</option>
+                <option value="8" data-price="1000">sampul buku plastik</option>
+                <option value="9" data-price="1200">sampul buku kertas</option>
+            </select>
+
+            <label for="quantity">Jumlah barang alat tulis:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <label for="discount">Diskon (%)</label>
+            <input type="number" id="discount" value="0" min="0" max="100">
+
+            <!-- Tombol Tambah Barang -->
+            <button id="addItemButton">Tambah barang alat tulis</button>
+        </div>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama barang alat tulis</th>
+                    <th>Harga Satuan</th>
+                    <th>Jumlah</th>
+                    <th>Total Harga</th>
+                    <th>Diskon (%)</th>
+                    <th>Jumlah Diskon</th>
+                    <th>Harga Setelah Diskon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+
+    </tr>
+</thead>
+<tbody></tbody>
+</table>
+<div class="total-container">
+<strong>Total Harga Semua barang: </strong>
+<span id="totalAll">Rp 0</span>
+</div>
+<div class="print-container no-print"> <!-- Tambahkan class no-print -->
+<button id="printButton">Cetak Struk</button>
+</div>
+<div class="thanks-message" style="display: none;">
+    <p><strong>Terima Kasih semoga datang kembali lagii!</strong></p>
+</div>              
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Set background color and font */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(gambar.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+/* Center the content inside a container */
+.container {
+    opacity: 1.0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Black with 50% transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40% auto;
+    max-width: 1000px;
+}
+
+@media print {
+    body {
+        background: none !important;
+    }
+
+    .container {
+        background-color: rgb(25, 24, 24) !important;
+        opacity: 1;
+        box-shadow: none;
+        width: 50%; /* Menyesuaikan lebar container untuk cetak */
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Sembunyikan elemen yang tidak diperlukan saat dicetak */
+    .form-container, .print-container, .no-print {
+        display: none !important;
+    }
+
+    /* Tabel struk */
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    th, td {
+        border: none;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    /* Menyesuaikan kolom agar tidak ada yang kosong */
+    td:last-child {
+        display: none !important; /* Menghilangkan kolom terakhir (kolom 'Hapus') */
+    }
+
+    .total-container {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .thanks-message {
+        display: block !important;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+/* Style form labels and inputs */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #f71fc1;
+    border-radius: 4px;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #555252;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #a09898;
+}
+
+/* Container for Total Harga Semua Barang */
+.total-container {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Make the page look nice with some spacing */
+table, .form-container {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.itemButton{
+    background-color: rgb(197, 232, 146);
+    padding:5px;
+    border-radius:5px;
+}
+.itemButton:hover{
+    background-color: red;
+    transition:.5s;
+}
